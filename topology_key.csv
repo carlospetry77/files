@@ -1,3 +1,4 @@
+ID,description,name,params,a,b,c,d,e,f,g
 9656,pred-energi-12h-p25-parque-eolico-punta-sierra,Predicción a corto plazo de producción de energía (percentil 25) para PARQUE EÓLICO PUNTA SIERRA,"{""max_op"": 81.6, ""max_tol"": 85.68}",16,,17,1694920.0,2018-11-12 11:38:50.855645,2018-11-12 11:38:50.855619,1.0
 9657,pred-energi-12h-p50-parque-eolico-punta-sierra,Predicción a corto plazo de producción de energía (percentil 50) para PARQUE EÓLICO PUNTA SIERRA,"{""max_op"": 81.6, ""max_tol"": 85.68}",16,,18,1694920.0,2018-11-12 11:38:51.23669,2018-11-12 11:38:51.236675,1.0
 10173,prog-rcpf-normal-baj-ata-tg2a-0-5tv2c-gnl-d,ATA-TG2A+0.5TV2C_GNL_D,{},181,2150330.0,103,1867291.0,2019-03-05 16:33:29.273442,2019-07-31 16:03:27.150738,2.0
