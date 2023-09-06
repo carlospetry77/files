@@ -2,13 +2,13 @@
 version: 1
 lineage:
   - entity: 
-      name: urn:li:dataset:(urn:li:dataPlatform:s3,cen-concepto-datahub/generacion_real/ft_generacion_real.parquet,PROD)
+      name: cen-concepto-datahub/generacion_real/ft_generacion_real.parquet
       type: dataset
       env: PROD
       platform: s3
     upstream:
       - entity:
-          name: urn:li:dataset:(urn:li:dataPlatform:s3,cen-staging-datahub/opreal/ops_mesurement.parquet,PROD)
+          name: ucen-staging-datahub/opreal/ops_mesurement.parquet
           type: dataset
           env: PROD
           platform: s3
