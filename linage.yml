@@ -8,7 +8,7 @@ lineage:
       platform: s3
     upstream:
       - entity:
-          name: ucen-staging-datahub/opreal/ops_mesurement.parquet
+          name: cen-staging-datahub/opreal/ops_mesurement.parquet
           type: dataset
           env: PROD
           platform: s3
