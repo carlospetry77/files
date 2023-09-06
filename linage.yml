@@ -1,0 +1,22 @@
+---
+version: 1
+lineage:
+  - entity: 
+      name: urn:li:dataset:(urn:li:dataPlatform:s3,cen-concepto-datahub/generacion_real/ft_generacion_real.parquet,PROD)
+      type: dataset
+      env: PROD
+      platform: s3
+    upstream:
+      - entity:
+          name: urn:li:dataset:(urn:li:dataPlatform:s3,cen-staging-datahub/opreal/ops_mesurement.parquet,PROD)
+          type: dataset
+          env: PROD
+          platform: s3
+    fineGrainedLineages:
+      - upstreamType: FIELD_SET
+        upstreams:
+          - urn:li:schemaField:(urn:li:dataset:(urn:li:dataPlatform:s3,cen-staging-datahub/opreal/ops_mesurement.parquet,PROD),reported_time_id)
+        downstreamType: FIELD_SET
+        downstreams:
+          - urn:li:schemaField:(urn:li:dataset:(urn:li:dataPlatform:s3,cen-concepto-datahub/generacion_real/ft_generacion_real.parquet,PROD),id_tiempo)
+        confidenceScore: 1.0
