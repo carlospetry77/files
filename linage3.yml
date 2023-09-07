@@ -2,34 +2,34 @@
 version: 1
 lineage:
   - entity: 
-    - name: cen-concepto-datahub/generacion_real/ft_generacion_real.parquet
-    - type: dataset
-    - env: PROD
-    - platform: s3
-    - upstream:
+      name: cen-concepto-datahub/generacion_real/ft_generacion_real.parquet
+      type: dataset
+      env: PROD
+      platform: s3
+    upstream:
       - entity:
-        - name: cen-staging-datahub/opreal/ops_mesurement.parquet
-        - type: dataset
-        - env: PROD
-        - platform: s3
-        - fineGrainedLineages:
-          - upstreamType: FIELD_SET
-          - upstreams:
-            - urn:li:schemaField:(urn:li:dataset:(urn:li:dataPlatform:s3,cen-staging-datahub/opreal/ops_mesurement.parquet,PROD),reported_time_id)
-          - downstreamType: FIELD_SET
-          - downstreams:
-            - urn:li:schemaField:(urn:li:dataset:(urn:li:dataPlatform:s3,cen-concepto-datahub/generacion_real/ft_generacion_real.parquet,PROD),id_tiempo)
-          - confidenceScore: 1.0
+          name: cen-staging-datahub/opreal/ops_mesurement.parquet
+          type: dataset
+          env: PROD
+          platform: s3
       - entity:
-        - name: cen-concepto-datahub/dimensiones/dim_centrales.parquet
-        - type: dataset
-        - env: PROD
-        - platform: s3
-        - fineGrainedLineages:
-          - upstreamType: FIELD_SET
-          - upstreams:
-            - urn:li:schemaField:(urn:li:dataset:(urn:li:dataPlatform:s3,cen-concepto-datahub/dimensiones/dim_centrales.parquet,PROD),id)
-          - downstreamType: FIELD_SET
-          - downstreams:
-            - urn:li:schemaField:(urn:li:dataset:(urn:li:dataPlatform:s3,cen-concepto-datahub/generacion_real/ft_generacion_real.parquet,PROD),central_id)
-          - confidenceScore: 1.0
+          name: cen-concepto-datahub/dimensiones/dim_centrales.parquet
+          type: dataset
+          env: PROD
+          platform: s3
+    fineGrainedLineages:
+      - upstreamType: FIELD_SET
+        upstreams:
+          - urn:li:schemaField:(urn:li:dataset:(urn:li:dataPlatform:s3,cen-staging-datahub/opreal/ops_mesurement.parquet,PROD),reported_time_id)
+      - downstreamType: FIELD_SET
+        downstreams:
+          - urn:li:schemaField:(urn:li:dataset:(urn:li:dataPlatform:s3,cen-concepto-datahub/generacion_real/ft_generacion_real.parquet,PROD),id_tiempo)
+        confidenceScore: 1.0  
+    fineGrainedLineages:
+      - upstreamType: FIELD_SET
+        upstreams:
+          - urn:li:schemaField:(urn:li:dataset:(urn:li:dataPlatform:s3,cen-concepto-datahub/dimensiones/dim_centrales.parquet,PROD),id)
+      - downstreamType: FIELD_SET
+        downstreams:
+          - urn:li:schemaField:(urn:li:dataset:(urn:li:dataPlatform:s3,cen-concepto-datahub/generacion_real/ft_generacion_real.parquet,PROD),central_id)
+        confidenceScore: 1.0
