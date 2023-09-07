@@ -8,15 +8,15 @@ lineage:
       platform: s3
     upstream:
       - entity:
-          name: cen-raw-datahub/opreal/ops_mesurement.parquet
+          name: cen-raw-datahub/opreal/ops_measurement.parquet
           type: dataset
           env: PROD
           platform: s3
     fineGrainedLineages:
       - upstreamType: FIELD_SET
         upstreams:
-          - urn:li:schemaField:(urn:li:dataset:(urn:li:dataPlatform:s3,cen-raw-datahub/opreal/ops_mesurement.parquet,PROD),reported_time_id)
+          - urn:li:schemaField:(urn:li:dataset:(urn:li:dataPlatform:s3,cen-raw-datahub/opreal/ops_measurement.parquet,PROD),reported_time_id)
         downstreamType: FIELD_SET
         downstreams:
-          - urn:li:schemaField:(urn:li:dataset:(urn:li:dataPlatform:s3,cen-staging-datahub/opreal/ops_mesurement.parquet,PROD),reported_time_id)
+          - urn:li:schemaField:(urn:li:dataset:(urn:li:dataPlatform:s3,cen-staging-datahub/opreal/ops_measurement.parquet,PROD),reported_time_id)
         confidenceScore: 1.0
